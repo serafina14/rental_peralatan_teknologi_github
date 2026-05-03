@@ -1,0 +1,60 @@
+:root {
+    --navy: #062b63;
+    /* --navy-dark: #111e3d ;      untuk hover */
+    --blue: #1E88E5;
+    --blue-light: #8fc9ff;    
+    /* untuk hover */
+    --bg: #F4F7FB;
+    --white : #FFFFFF;
+    --gray-text: #cbcdce;
+    --text-dark: #1F2937;
+}
+body {
+    background-color: var(--bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navbar{
+    background-color: var(--white);
+    border-bottom: 2px solid var(--navy);
+    padding: 8px 0;
+}
+.navbar-brand {
+    color: var(--blue);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar-brand img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+.nav-link {
+    color: var(--navy);
+    font-weight: 500;
+    transition: 0.3s;
+}
+.nav-link:hover {
+    color: var(--blue);
+    transform: translateY(-1px);
+}
+.btn-daftar{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding: 8px 8px;
+}
+.btn-daftar:hover {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.content{
+    flex: 1;
+}
