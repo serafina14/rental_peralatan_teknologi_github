@@ -1,6 +1,5 @@
 :root {
     --navy: #062b63;
-    /* --navy-dark: #111e3d ;      untuk hover */
     --blue: #1E88E5;
     --blue-light: #8fc9ff;    
     /* untuk hover */
@@ -55,6 +54,53 @@ body {
     background-color: var(--navy);
     color: var(--white);
 }
-.content{
-    flex: 1;
+.card-kategori{
+    transition: transform 0.3s ease, shadow 0.3s ease;
+    cursor: pointer;
+}
+.card-kategori:hover { transform: translateY(-10px); }
+/* Filter Buttons */
+.btn-filter {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 1px solid var(--gray-text);
+    background-color: var(--white);
+    color: var(--text-dark);
+    text-decoration: none;
+}
+.btn-filter.active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn-filter:hover:not(.active) {
+    background-color: var(--blue-light);
+    color: var(--navy);
+}
+/* --- Halaman auth (login & register) --- */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg); 
+}
+.login-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: var(--white);
+    padding: 2rem;
+}
+.btn-auth {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn-auth:hover {
+    background-color: var(--navy);
+    color: var(--white);
 }

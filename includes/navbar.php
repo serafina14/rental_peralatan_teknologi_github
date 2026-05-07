@@ -3,14 +3,13 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-<nav class="navbar navbar-expand-lg navbar-light
- shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="<?= isset($_SESSION['role']) && $_SESSION['role'] == 'admin' ? '../index.php' : 'index.php' ?>"> <img src="assets/img/logo_transparent.png" alt="logo">
      RentalTech
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
+      <i class="navbar-toggler-icon"></i>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-center">
