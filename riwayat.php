@@ -1,7 +1,7 @@
 <?php
 // Cek session sebelum include navbar
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+    session_start();   
 }
 
 // Redirect ke login jika belum login
