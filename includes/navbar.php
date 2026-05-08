@@ -18,18 +18,18 @@ if (session_status() === PHP_SESSION_NONE) {
           <!-- Belum login -->
           <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="auth/login.php">Login</a></li>
           <li class="nav-item">
-            <a class="btn btn-daftar btn-sm ms-2 px-3" href="register.php">Daftar</a>
+            <a class="btn btn-daftar btn-sm ms-2 px-3" href="auth/register.php">Daftar</a>
           </li>
 
         <?php elseif ($_SESSION['role'] == 'admin'): ?>
           <!-- Admin -->
-          <li class="nav-item"><a class="nav-link" href="../index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="../katalog.php">Katalog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
           <li class="nav-item"><a class="nav-link" href="dashboard.php">Admin</a></li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="../logout.php">
+            <a class="nav-link text-danger" href="auth/logout.php">
               Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
             </a>
           </li>
@@ -40,7 +40,7 @@ if (session_status() === PHP_SESSION_NONE) {
           <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
           <li class="nav-item"><a class="nav-link" href="riwayat.php">Riwayat Sewa</a></li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="logout.php">
+            <a class="nav-link text-danger" href="auth/logout.php">
               Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
             </a>
           </li>
