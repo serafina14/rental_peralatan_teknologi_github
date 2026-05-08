@@ -6,17 +6,15 @@ $error = "";
 $success = "";
 
 if (isset($_POST['register'])) {
-    $nama = mysqli_real_escape_string($conn, $_POST['nama']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
-    $role = 'user'; // Default pendaftar baru adalah user
+    $role = 'user'; 
 
-    // Cek apakah email sudah terdaftar
     $check_email = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
     if (mysqli_num_rows($check_email) > 0) {
         $error = "Email sudah terdaftar! Gunakan email lain.";
     } else {
-        // Simpan ke database
         $query = "INSERT INTO users (nama, email, password, role) VALUES ('$nama', '$email', '$password', '$role')";
         if (mysqli_query($conn, $query)) {
             $success = "Pendaftaran berhasil! Silakan login.";
@@ -29,7 +27,6 @@ if (isset($_POST['register'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,24 +36,19 @@ if (isset($_POST['register'])) {
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Registrasi</title>
 </head>
-
 <body class="auth-container">
-
     <div class="container d-flex justify-content-center">
         <div class="card login-card border-0 shadow-sm">
             <div class="text-center mb-4">
                 <h2 class="fw-bold" style="color: var(--navy);">Daftar Akun</h2>
                 <p class="text-muted">Lengkapi data untuk bergabung dengan RentalTech</p>
             </div>
-
-            <?php if ($error) : ?>
+            <?php if ($error) { ?>
                 <div class="alert alert-danger small py-2"><?php echo $error; ?></div>
-            <?php endif; ?>
-
-            <?php if ($success) : ?>
+            <?php } ?>
+            <?php if ($success) { ?>
                 <div class="alert alert-success small py-2"><?php echo $success; ?></div>
-            <?php endif; ?>
-
+            <?php } ?>
             <form action="" method="POST">
                 <div class="mb-3">
                     <label class="form-label small fw-bold">Nama Lengkap</label>

@@ -10,7 +10,6 @@ if(!isset($_SESSION['id_user'])){
 
 $id_filter = isset($_GET['id_kategori']) ? $_GET['id_kategori'] : "";
 
-// Query Ambil Data Barang
 if ($id_filter) {
     $query = "SELECT barang.*, kategori.nama_kategori 
               FROM barang 
@@ -29,17 +28,13 @@ $result = mysqli_query($conn, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- css sendiri -->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Katalog</title>
 </head>
-
 <body>
     <div class="container my-5">
         <h3 class="fw-bold mb-4" style="color: var(--navy);">Katalog Peralatan</h3>
-
         <div class="d-flex flex-wrap gap-2 mb-5">
             <a href="katalog.php" class="btn-filter <?= $id_filter == "" ? 'active' : '' ?>">Semua</a>
             <a href="katalog.php?id_kategori=1" class="btn-filter <?= $id_filter == "1" ? 'active' : '' ?>">Fotografi & Videografi</a>
@@ -84,7 +79,6 @@ $result = mysqli_query($conn, $query);
     </div>
 
     <?php include "includes/footer.php"; ?>
-    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 

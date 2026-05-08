@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- css sendiri -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <title>RentalTech</title>
 </head>
-
 <body>
-
-    <!-- navbar -->
     <?php include "includes/navbar.php"; ?>
     <!-- hero section -->
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
-            <!-- GAMBAR DI KANAN -->
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="assets/img/fotografi_sonyA7.jpeg" class="d-block mx-lg-auto img-fluid rounded-4 shadow-lg" alt="Hero Image" width="700" height="500" loading="lazy">
             </div>
 
-            <!-- TEKS DI KIRI -->
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3" style="color: var(--navy);">Eksplor Teknologi Tanpa Harus Membeli.</h1>
                 <p class="lead">Sewa kamera profesional, laptop high-end, dan console gaming terbaru dengan harga terjangkau. Proses cepat, syarat mudah, dan barang terjamin kualitasnya.</p>
@@ -90,14 +81,4 @@
         </div>
     </div>
 
-    
-
-
-    <!-- footer -->
     <?php include "includes/footer.php"; ?>
-
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-
-</html>
