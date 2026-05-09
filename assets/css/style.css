@@ -104,3 +104,79 @@ body {
     background-color: var(--navy);
     color: var(--white);
 }
+/* judul halaman */
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.page-title i {
+    color: var(--blue);
+    font-size: 22px;
+}
+/* alert sukses */
+.alert-sukses {
+    background-color: #d1f7d6;
+    border: 1px solid #a3e6ab;
+    color: #1a6e2e;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.card-riwayat {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+/* tabel riwayat */
+.table-riwayat {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-riwayat thead tr {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.table-riwayat thead th {
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+}
+.table-riwayat tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+.table-riwayat tbody tr:last-child {
+    border-bottom: none;
+}
+.table-riwayat tbody td {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+/* badge status */
+.badge-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+/* status aktif = hijau muda */
+.badge-aktif {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+/* status selesai = abu-abu */
+.badge-selesai {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
