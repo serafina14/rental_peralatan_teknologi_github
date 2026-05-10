@@ -1,9 +1,9 @@
-<?php 
+<?php
 session_start();
 include "includes/koneksi.php";
 include "includes/navbar.php";
 
-if(!isset($_SESSION['id_user'])){
+if (!isset($_SESSION['id_user'])) {
     header("location: auth/login.php");
     exit;
 }
@@ -63,7 +63,7 @@ if (!$data) {
 
                         <div class="mb-3">
                             <label class="form-label small fw-bold">Tanggal Mulai Sewa</label>
-                            <input type="date" name="tanggal_sewa" class="form-control" required>
+                            <input type="date" name="tanggal_sewa" class="form-control" min="<?= date('Y-m-d'); ?>" required>
                         </div>
 
                         <div class="mb-3">
