@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "includes/koneksi.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

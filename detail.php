@@ -1,7 +1,6 @@
 <?php
 session_start();
 include "includes/koneksi.php";
-include "includes/navbar.php";
 
 if (!isset($_SESSION['id_user'])) {
     header("location: auth/login.php");
@@ -35,6 +34,8 @@ if (!$data) {
 </head>
 
 <body>
+    <?php include "includes/navbar.php"; ?>
+    
     <div class="container mt-3 mb-5">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">

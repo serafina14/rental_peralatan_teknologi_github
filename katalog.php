@@ -1,7 +1,5 @@
 <?php
-session_start();
 include "includes/koneksi.php";
-include "includes/navbar.php";
 
 $id_filter = isset($_GET['id_kategori']) ? $_GET['id_kategori'] : "";
 
@@ -18,17 +16,18 @@ if ($id_filter) {
 $result = mysqli_query($conn, $query);
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Katalog</title>
+    <title>Katalog - RentalTech</title>
 </head>
-
 <body>
+
+<?php include "includes/navbar.php"; ?>
+
     <div class="container my-5">
         <h3 class="fw-bold mb-4" style="color: var(--navy);">Katalog Peralatan</h3>
         <div class="d-flex flex-wrap gap-2 mb-5">

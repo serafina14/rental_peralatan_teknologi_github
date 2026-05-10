@@ -374,3 +374,58 @@ body {
     background-color: #b91c1c;
     color: var(--white);
 }
+/* card form dan tabel admin */
+.card-form {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+}
+.card-form h6 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.card-table {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.btn-tambah {
+    background-color: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn-tambah:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn-batal {
+    background-color: #e5e7eb;
+    color: var(--text-dark);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-batal:hover {
+    background-color: #d1d5db;
+}
+.content {
+    flex: 1;
+}
