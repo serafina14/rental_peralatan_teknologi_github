@@ -35,7 +35,7 @@ if (!$data) {
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container mt-3 mb-5">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="katalog.php" class="text-decoration-none">Katalog</a></li>
