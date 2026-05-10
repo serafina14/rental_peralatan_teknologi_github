@@ -180,3 +180,197 @@ body {
     color: #374151;
     border: 1px solid #d1d5db;
 }
+/* admin-dashboard */
+.stat-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+.stat-card:hover {
+    box-shadow: 0 4px 16px rgba(6,43,99,0.12);
+    transform: translateY(-2px);
+}
+
+.stat-icon   { font-size: 32px; margin-bottom: 8px; }
+.stat-number { font-size: 28px; font-weight: 700; color: var(--text-dark); line-height: 1; margin-bottom: 4px; }
+.stat-label  { font-size: 13px; color: #6B7280; font-weight: 500; }
+
+.icon-barang    { color: #D97706; }
+.icon-user      { color: #7C3AED; }
+.icon-transaksi { color: var(--blue); }
+.icon-kategori  { color: #F59E0B; }
+
+.menu-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 28px 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+.menu-card:hover {
+    box-shadow: 0 4px 16px rgba(6,43,99,0.14);
+    transform: translateY(-2px);
+}
+
+.menu-icon  { font-size: 30px; margin-bottom: 10px; }
+.menu-title { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+.menu-desc  { font-size: 12px; color: #6B7280; }
+
+.icon-menu-barang    { color: #D97706; }
+.icon-menu-kategori  { color: #F59E0B; }
+.icon-menu-penyewaan { color: var(--blue); }
+
+/* admin-tabel transaksi */
+.tabel-transaksi {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabel-transaksi thead tr {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.tabel-transaksi thead th {
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+.tabel-transaksi tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+.tabel-transaksi tbody tr:last-child {
+    border-bottom: none;
+}
+.tabel-transaksi tbody td {
+    padding: 11px 14px;
+    font-size: 13px;
+    color: var(--text-dark);
+    vertical-align: middle;
+}
+
+/* admin-tabel user */
+.tabel-user {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabel-user thead tr {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.tabel-user thead th {
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+.tabel-user tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+.tabel-user tbody tr:last-child {
+    border-bottom: none;
+}
+.tabel-user tbody td {
+    padding: 11px 14px;
+    font-size: 13px;
+    color: var(--text-dark);
+    vertical-align: middle;
+}
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    background-color: var(--navy);
+    color: var(--white);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+.badge-role-user {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #93c5fd;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-role-admin {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+/* admin - tabel barang */
+.tabel-barang {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabel-barang thead tr {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.tabel-barang thead th {
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+.tabel-barang tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+.tabel-barang tbody tr:last-child {
+    border-bottom: none;
+}
+.tabel-barang tbody td {
+    padding: 11px 14px;
+    font-size: 13px;
+    color: var(--text-dark);
+    vertical-align: middle;
+}
+.btn-edit {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+.btn-edit:hover {
+    background-color: var(--navy);
+    color: var(--white);
+}
+.btn-hapus {
+    background-color: #ef4444;
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+.btn-hapus:hover {
+    background-color: #b91c1c;
+    color: var(--white);
+}

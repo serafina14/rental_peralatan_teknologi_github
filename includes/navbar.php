@@ -24,13 +24,12 @@ if (session_status() === PHP_SESSION_NONE) {
           </li>
 
         <?php elseif ($_SESSION['role'] == 'admin'): ?>
-          <!-- Admin -->
-          <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
-          <li class="nav-item"><a class="nav-link" href="dashboard.php">Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/') - 2) ?>index.php">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/') - 2) ?>katalog.php">Katalog</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/') - 2) ?>admin/dashboard.php">Admin</a></li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="auth/logout.php">
-              Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
+            <a class="nav-link text-danger" href="<?= str_repeat('../', substr_count($_SERVER['PHP_SELF'], '/') - 2) ?>auth/logout.php">
+                Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
             </a>
           </li>
 
