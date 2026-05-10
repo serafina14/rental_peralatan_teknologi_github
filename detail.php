@@ -35,7 +35,7 @@ if (!$data) {
 
 <body>
     <?php include "includes/navbar.php"; ?>
-    
+
     <div class="container mt-3 mb-5">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
@@ -64,7 +64,7 @@ if (!$data) {
 
                         <div class="mb-3">
                             <label class="form-label small fw-bold">Tanggal Mulai Sewa</label>
-                            <input type="date" name="tanggal_sewa" class="form-control" min="<?= date('Y-m-d'); ?>" required>
+                            <input type="date" name="tanggal_sewa" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
