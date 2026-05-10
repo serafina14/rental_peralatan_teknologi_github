@@ -3,11 +3,6 @@ session_start();
 include "includes/koneksi.php";
 include "includes/navbar.php";
 
-if(!isset($_SESSION['id_user'])){
-    header("location: auth/login.php");
-    exit;
-}
-
 $id_filter = isset($_GET['id_kategori']) ? $_GET['id_kategori'] : "";
 
 if ($id_filter) {
@@ -32,6 +27,7 @@ $result = mysqli_query($conn, $query);
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Katalog</title>
 </head>
+
 <body>
     <div class="container my-5">
         <h3 class="fw-bold mb-4" style="color: var(--navy);">Katalog Peralatan</h3>
