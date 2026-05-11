@@ -58,23 +58,15 @@ $total_kategori  = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM ka
             </div>
         </div>
 
-        <!-- baris menu kelola -->
         <div class="row g-3">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6">
                 <a href="barang.php" class="menu-card">
                     <div class="menu-icon icon-menu-barang"><i class="bi bi-box-seam-fill"></i></div>
                     <div class="menu-title">Kelola Barang</div>
                     <div class="menu-desc">Tambah, ubah, hapus barang</div>
                 </a>
             </div>
-            <div class="col-12 col-md-4">
-                <a href="kategori.php" class="menu-card">
-                    <div class="menu-icon icon-menu-kategori"><i class="bi bi-tags-fill"></i></div>
-                    <div class="menu-title">Kelola Kategori</div>
-                    <div class="menu-desc">Tambah, ubah, hapus kategori</div>
-                </a>
-            </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6">
                 <a href="transaksi.php" class="menu-card">
                     <div class="menu-icon icon-menu-penyewaan"><i class="bi bi-file-earmark-text-fill"></i></div>
                     <div class="menu-title">Data Penyewaan</div>
@@ -82,7 +74,6 @@ $total_kategori  = mysqli_fetch_row(mysqli_query($conn, "SELECT COUNT(*) FROM ka
                 </a>
             </div>
         </div>
-
     </div>
 </main>
 
