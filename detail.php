@@ -59,6 +59,14 @@ if (!$data) {
 
                 <div class="card border-0 shadow-sm p-4" style="background-color: #f8f9fa;">
                     <h5 class="fw-bold mb-3">Form Penyewaan</h5>
+
+                    <?php if(isset($_SESSION['error_sewa'])): ?>
+                        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-bottom: 15px; border: 1px solid #f5c6cb; font-size: 14px;">
+                            <?= $_SESSION['error_sewa']; ?>
+                        </div>
+                        <?php unset($_SESSION['error_sewa']); ?>
+                    <?php endif;?>
+
                     <form action="proses_sewa.php" method="POST">
                         <input type="hidden" name="id_barang" value="<?php echo $data['id_barang']; ?>">
 
@@ -74,7 +82,7 @@ if (!$data) {
 
                         <div class="mb-4">
                             <label class="form-label small fw-bold">Jumlah Unit (Tersedia: <?php echo $data['stok']; ?>)</label>
-                            <input type="number" name="jumlah" class="form-control" min="1" max="<?php echo $data['stok']; ?>" value="1">
+                            <input type="number" name="jumlah" class="form-control" min="1" value="1">
                         </div>
 
                         <button type="submit" class="btn btn-primary w-100 py-3 fw-bold" style="background-color: var(--blue); border: none;">
