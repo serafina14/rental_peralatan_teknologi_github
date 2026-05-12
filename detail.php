@@ -34,7 +34,7 @@ if (!$data) {
 </head>
 
 <body>
-    <?php include "includes/navbar.php"; ?>
+    <?php require_once __DIR__ . '/includes/navbar.php'; ?>
 
     <div class="container mt-3 mb-5">
         <nav aria-label="breadcrumb" class="mb-4">

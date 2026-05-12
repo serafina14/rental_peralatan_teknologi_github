@@ -26,7 +26,7 @@ $result = mysqli_query($conn, $query);
 </head>
 <body>
 
-<?php include "includes/navbar.php"; ?>
+<?php require_once __DIR__ . '/includes/navbar.php'; ?>
 
     <div class="container my-5">
         <h3 class="fw-bold mb-4" style="color: var(--navy);">Katalog Peralatan</h3>

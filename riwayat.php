@@ -49,7 +49,7 @@ $result = mysqli_query($conn, $query);
 </head>
 <body>
 
-    <?php include "includes/navbar.php"; ?>
+    <?php require_once __DIR__ . '/includes/navbar.php'; ?>
 
     <!-- kontek utama -->
     <main class="content py-4">

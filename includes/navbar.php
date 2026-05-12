@@ -1,13 +1,12 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+require_once __DIR__ . '/../config/config.php';
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold">
-      <img src="/RentalTech/assets/img/logo_transparent.png" alt="logo">
+
+    <a class="navbar-brand fw-bold" href="<?= BASE_URL ?>/index.php">
+      <img src="<?= BASE_URL ?>/assets/img/logo_transparent.png" alt="logo">
       RentalTech
     </a>
 
@@ -20,32 +19,64 @@ if (session_status() === PHP_SESSION_NONE) {
 
         <?php if (!isset($_SESSION['id_user'])): ?>
 
-          <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
-          <li class="nav-item"><a class="nav-link" href="auth/login.php">Login</a></li>
           <li class="nav-item">
-            <a class="btn btn-daftar btn-sm ms-2 px-3" href="auth/register.php">Daftar</a>
+            <a class="nav-link" href="<?= BASE_URL ?>/index.php">Beranda</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?= BASE_URL ?>/katalog.php">Katalog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?= BASE_URL ?>/auth/login.php">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn btn-daftar btn-sm ms-2 px-3"
+               href="<?= BASE_URL ?>/auth/register.php">
+               Daftar
+            </a>
           </li>
 
         <?php elseif ($_SESSION['role'] == 'admin'): ?>
-          
-          <li class="nav-item"><a class="nav-link" href="/RentalTech/index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
-          <li class="nav-item"><a class="nav-link" href="admin/dashboard.php">Admin</a></li>
+
           <li class="nav-item">
-            <a class="nav-link text-danger" href="auth/logout.php">
-              Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
+            <a class="nav-link" href="<?= BASE_URL ?>/index.php">Beranda</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?= BASE_URL ?>/katalog.php">Katalog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?= BASE_URL ?>/admin/dashboard.php">Admin</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-danger"
+               href="<?= BASE_URL ?>/auth/logout.php">
+               Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
             </a>
           </li>
 
         <?php else: ?>
 
-          <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="katalog.php">Katalog</a></li>
-          <li class="nav-item"><a class="nav-link" href="riwayat.php">Riwayat Sewa</a></li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="auth/logout.php">
-              Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
+            <a class="nav-link" href="<?= BASE_URL ?>/index.php">Beranda</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?= BASE_URL ?>/katalog.php">Katalog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?= BASE_URL ?>/riwayat.php">Riwayat Sewa</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-danger"
+               href="<?= BASE_URL ?>/auth/logout.php">
+               Logout (<?= htmlspecialchars($_SESSION['nama']) ?>)
             </a>
           </li>
 

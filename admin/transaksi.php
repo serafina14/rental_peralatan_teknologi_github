@@ -25,7 +25,7 @@ $result = mysqli_query(
 
 <body>
 
-    <?php include "../includes/navbar.php"; ?>
+    <?php require_once __DIR__ . '/../includes/navbar.php'; ?>
 
     <main class="content py-4">
         <div class="container">
